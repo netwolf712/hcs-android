@@ -1,6 +1,28 @@
 # hcs-android
 
 安卓基础代码，所有设备的代码都从此衍生出去
+*视频播放、呼叫相关的库都只编译了arm系统，x86平台并不支持，所以无法在虚拟机上调试相关功能，只能在arm平台（比如真机）上进行调试。
+*gradle.properties 涉及账号、密码登隐私配置，不便上传到代码仓库，需要自行生成（可参考gradle-sample.properties）
+
+# Android Studio版本
+
+Android Studio Dolphin | 2021.3.1
+Build #AI-213.7172.25.2113.9014738, built on September 1, 2022
+Runtime version: 11.0.13+0-b1751.21-8125866 x86_64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
+macOS 12.6.8
+GC: G1 Young Generation, G1 Old Generation
+Memory: 1024M
+Cores: 8
+Registry:
+external.system.auto.import.disabled=true
+ide.text.editor.with.preview.show.floating.toolbar=false
+
+Non-Bundled Plugins:
+idea.plugin.protoeditor (213.6461.28)
+org.intellij.plugins.markdown (213.6777.22)
+com.thoughtworks.gauge (213.5744.125)
+
 
 ## 目录结构
 ~~~
@@ -125,7 +147,7 @@ dependencyResolutionManagement {
 
 * 添加类库引用
 ~~~
-    implementation('com.hcs.android:lib-hcs-android-common:0.1.0'){
+    implementation('io.github.netwolf712:lib-hcs-android-common:0.1.0'){
         //将内建库变为动态更新版本，便于实时同步
         changing = true
     }

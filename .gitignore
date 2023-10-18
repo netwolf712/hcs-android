@@ -22,6 +22,7 @@ res/raw/lpconfig.xsd
 res/value-hi_IN
 linphone-sdk-android/*.aar
 app/release
+app/debug
 app/src/main/res/xml/contacts.xml
 node_modules
 web

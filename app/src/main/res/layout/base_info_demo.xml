@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="deviceInfo"
+            type="com.hcs.android.business.entity.DeviceModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvPhoneNO"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/base_phone_no" />
+
+        <EditText
+            android:id="@+id/etPhoneNO"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tvPhoneNO"
+            android:hint="@string/base_phone_no"
+            android:text="@{deviceInfo.device.phoneNo}" />
+
+        <TextView
+            android:id="@+id/tvParentNO"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/etPhoneNO"
+            android:gravity="center"
+            android:text="@string/base_parent_no" />
+
+        <EditText
+            android:id="@+id/etParentNO"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tvParentNO"
+            android:hint="@string/base_parent_no"
+            android:text="@{deviceInfo.device.parentNo}" />
+
+        <Button
+            android:id="@+id/btnParentNO"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/etParentNO"
+            android:text="@string/base_set" />
+        <TextView
+            android:id="@+id/tvCheckCode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvPhoneNO"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="@string/check_code" />
+
+        <EditText
+            android:id="@+id/etCheckCode"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvPhoneNO"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tvCheckCode"
+            android:hint="@string/check_code"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnCheckCode"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/etCheckCode"
+            android:layout_below="@id/tvPhoneNO"
+            android:text="@string/check" />
+
+        <TextView
+            android:id="@+id/tvSystemVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvCheckCode"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/base_system_version" />
+
+        <TextView
+            android:id="@+id/etSystemVersion"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvCheckCode"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tvSystemVersion"
+            android:text="@{deviceInfo.device.systemVersion}" />
+
+
+
+        <TextView
+            android:id="@+id/etIsRoot"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tvCheckCode"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/etSystemVersion"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tvHardwareVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvSystemVersion"
+            android:gravity="center"
+            android:text="@string/base_hardware_version" />
+
+        <TextView
+            android:id="@+id/etHardwareVersion"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvSystemVersion"
+            android:layout_toRightOf="@id/tvHardwareVersion"
+            android:text="@{deviceInfo.device.hardwareVersion}"/>
+
+        <TextView
+            android:id="@+id/tvSoftwareVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvHardwareVersion"
+            android:gravity="center"
+            android:text="@string/base_software_version" />
+
+        <TextView
+            android:id="@+id/etSoftwareVersion"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvHardwareVersion"
+            android:layout_toRightOf="@id/tvSoftwareVersion"
+            android:text="@{deviceInfo.device.softwareVersion}"/>
+
+        <TextView
+            android:id="@+id/tvSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvSoftwareVersion"
+            android:gravity="center"
+            android:text="@string/base_serial" />
+
+        <TextView
+            android:id="@+id/etSerial"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvSoftwareVersion"
+            android:layout_toRightOf="@id/tvSerial"
+            android:text="@{deviceInfo.device.deviceId}"/>
+
+        <TextView
+            android:id="@+id/tvModule"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvSerial"
+            android:gravity="center"
+            android:text="@string/base_module" />
+
+        <TextView
+            android:id="@+id/etModule"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvSerial"
+            android:layout_toRightOf="@id/tvModule"
+            android:text="@{deviceInfo.device.module}"/>
+
+        <TextView
+            android:id="@+id/tvIpAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvModule"
+            android:gravity="center"
+            android:text="@string/base_ip_address" />
+
+        <TextView
+            android:id="@+id/etIpAddress"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvModule"
+            android:layout_toRightOf="@id/tvIpAddress"
+            android:text="@{deviceInfo.device.ipAddress}"/>
+
+
+        <TextView
+            android:id="@+id/tvMacAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/tvIpAddress"
+            android:gravity="center"
+            android:text="@string/base_mac_address" />
+
+        <TextView
+            android:id="@+id/etMacAddress"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tvIpAddress"
+            android:layout_toRightOf="@id/tvMacAddress"
+            android:text="@{deviceInfo.device.macAddress}"/>
+    </RelativeLayout>
+</layout>

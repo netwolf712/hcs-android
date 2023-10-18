@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.hcs.android.client">
+    <!-- 允许应用程序访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许应用程序访问存储设备 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许访问网络主题-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+</manifest>

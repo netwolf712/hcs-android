@@ -1,0 +1,4 @@
+<resources>
+    <!-- 呼叫 -->
+    <string name="pref_key_enable_video">pref.hcs.enable_video</string>
+</resources>

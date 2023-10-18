@@ -1,0 +1,49 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://repo1.maven.org'}
+//        maven {
+//            // Replace snapshots by releases for releases !
+//            url "https://linphone.org/releases/maven_repository"
+//        }
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/releases/'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+//        maven {
+//            // Replace snapshots by releases for releases !
+//            url "https://linphone.org/releases/maven_repository"
+//        }
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/releases/'
+        }
+    }
+}
+rootProject.name = "hcs-android"
+include ':app'
+include ':demo-call'
+include ':demo-common'
+include ':lib-hcs-android-common'
+include ':lib-hcs-android-server'
+include ':lib-hcs-android-client'
+include ':lib-hcs-android-ui'
+include ':lib-hcs-android-call'
+include ':lib-hcs-android-business'
+include ':lib-hcs-android-annotation'
+include ':lib-hcs-android-onvif'
+include ':lib-hcs-android-processor'
+include ':lib-hcs-android-maintain'
+include ':linphone-sdk'
+include ':java-libs'

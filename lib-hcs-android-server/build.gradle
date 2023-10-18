@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.yanzhenjie.andserver'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+//        debug{
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib-hcs-android-common')
+    //implementation rootProject.ext.dependencies.hcsCommon
+    //web服务端
+    implementation rootProject.ext.dependencies.andServerAnnotation
+    implementation rootProject.ext.dependencies.andServerApi
+    annotationProcessor rootProject.ext.dependencies.andServerProcessor
+
+    implementation "androidx.room:room-runtime:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
+}
+
+apply from: "../gradle-mvn-push.gradle";
+
+//编译发布到maven
+task deploy{
+    dependsOn tasks.clean
+    dependsOn tasks.build
+    dependsOn tasks.publish
+    tasks.preBuild.mustRunAfter(tasks.clean)
+    //tasks.generatePomFileForDebugPublication.mustRunAfter(tasks.build)
+    tasks.generatePomFileForReleasePublication.mustRunAfter(tasks.build)
+}
+
+configurations {
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpcore'
+}

@@ -1,0 +1,19 @@
+<resources>
+    <!-- 日志 -->
+    <string name="pref_key_hcs_maintain_log_dmesg">pref.hcs.maintain.log_dmesg</string>
+    <string name="pref_key_hcs_maintain_log_logcat">pref.hcs.maintain.log_logcat</string>
+    <string name="pref_key_hcs_maintain_log_pcap">pref.hcs.maintain.log_pcap</string>
+
+    <!-- 文件管理器缓存管理 -->
+    <string name="pref_key_hcs_maintain_cache_keep_time">pref.hcs.maintain.cache_keep_time</string>
+    <string name="pref_key_hcs_maintain_max_cache_size">pref.hcs.maintain.max_cache_size</string>
+    <string name="pref_key_hcs_maintain_upload_file_path">pref.hcs.maintain.upload_file_path</string>
+
+    <!-- 产品名称 -->
+    <string name="pref_key_hcs_maintain_product_name">pref.hcs.maintain.product_name</string>
+
+    <!-- NTP服务器相关 -->
+    <string name="pref_key_hcs_maintain_ntp_enable">pref.hcs.maintain.ntp_enable</string>
+    <string name="pref_key_hcs_maintain_ntp_server">pref.hcs.maintain.ntp_server</string>
+    <string name="pref_key_hcs_maintain_ntp_time">pref.hcs.maintain.ntp_time</string>
+</resources>

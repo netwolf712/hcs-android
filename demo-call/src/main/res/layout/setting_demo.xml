@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="phoneSetting"
+            type="com.hcs.calldemo.entity.PhoneSettingBo"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_username"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/setting_username"
+                android:text="@={phoneSetting.username}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_display_name"
+                android:gravity="center|left"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:id="@+id/etGroupName"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/setting_display_name"
+                android:text="@={phoneSetting.displayName}"
+                />
+            <Button
+                android:id="@+id/btnSetUserInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_save"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_auto_answer"
+                android:gravity="center|left"
+                />
+            <Switch
+                android:id="@+id/swAutoAnswer"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:checked="@={phoneSetting.autoAnswer}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_auto_answer_time"
+                android:gravity="center|left"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:id="@+id/etAutoAnswerTime"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/setting_auto_answer_time"
+                android:text="@={phoneSetting.autoAnswerTime}"
+                />
+            <Button
+                android:id="@+id/btnSetAutoAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_save"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_video_enable"
+                android:gravity="center|left"
+                />
+            <Switch
+                android:id="@+id/swVideoEnabled"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:checked="@={phoneSetting.videoEnabled}"
+                />
+
+
+            <Button
+                android:id="@+id/btnSetVideoEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_save"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_user_IPv6"
+                android:gravity="center|left"
+                />
+            <Switch
+                android:id="@+id/swUseIPv6"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:checked="@={phoneSetting.useIPv6}"
+                />
+
+
+            <Button
+                android:id="@+id/btnSetUseIPv6"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/setting_save"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

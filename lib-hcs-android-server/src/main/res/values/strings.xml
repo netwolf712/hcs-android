@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lib-hcs-android-server</string>
+    <string name="need_login">您尚未登录，请先登录</string>
+    <string name="no_user">未找到对应的用户</string>
+    <string name="change_password_failed">修改密码失败</string>
+    <string name="error_username_or_password">用户名或密码错误</string>
+</resources>

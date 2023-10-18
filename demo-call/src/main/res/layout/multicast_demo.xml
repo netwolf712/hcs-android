@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.hcs.android.ui.util.ShowUtil" />
+        <variable
+            name="multicastBo"
+            type="com.hcs.calldemo.entity.MulticastBo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/frgVideo"
+            android:layout_width="400dp"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/tvCallAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:gravity="center"
+            android:text="@string/multicast_filepath" />
+
+        <EditText
+            android:id="@+id/etFilePath"
+            android:layout_width="wrap_content"
+            android:minWidth="200dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvCallAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvCallAddress"
+            android:hint="@string/multicast_filepath"
+            android:text="@={multicastBo.filePath}" />
+
+        <TextView
+            android:id="@+id/tvRemoteNameKey"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvCallAddress"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:gravity="center"
+            android:text="@string/multicast_address" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvRemoteNameKey"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvRemoteNameKey"
+            android:gravity="center|left"
+            android:hint="@string/multicast_address"
+            android:text="@={multicastBo.address}" />
+
+        <Button
+            android:id="@+id/btnStartPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:text="@string/multicast_start_play" />
+
+
+        <Button
+            android:id="@+id/btnStopPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:text="@string/multicast_stop_play" />
+
+
+        <Button
+            android:id="@+id/btnStartMulticast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/btnStartPlay"
+            android:text="@string/multicast_start" />
+
+        <Button
+            android:id="@+id/btnStopMulticast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/btnStartPlay"
+            android:text="@string/multicast_stop" />
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/btnStartMulticast"
+            android:text="@string/multicast_choose_file" />
+
+        <TextView
+            android:id="@+id/tvWithVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/multicast_with_video"
+            android:gravity="center|left"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_below="@+id/btnChooseFile"
+            />
+        <Switch
+            android:id="@+id/swWithVideo"
+            android:layout_width="wrap_content"
+            android:minWidth="20dp"
+            android:layout_toRightOf="@id/tvWithVideo"
+            android:layout_below="@+id/btnChooseFile"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:checked="@={multicastBo.withVideo}"
+            />
+
+        <TextView
+            android:id="@+id/tvLoopPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/multicast_with_video"
+            android:gravity="center|left"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_below="@+id/tvWithVideo"
+            />
+        <Switch
+            android:id="@+id/swLoopPlay"
+            android:layout_width="wrap_content"
+            android:minWidth="20dp"
+            android:layout_toRightOf="@id/tvLoopPlay"
+            android:layout_below="@+id/tvWithVideo"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:checked="@={multicastBo.loopPlay}"
+            />
+    </RelativeLayout>
+</layout>

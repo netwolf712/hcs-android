@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">hcs-android</string>
+    <!-- 基本信息相关 -->
+    <string name="base_phone_no">本机号码</string>
+    <string name="base_parent_no">上级主机号码</string>
+    <string name="check_code">校验码</string>
+    <string name="check">校验</string>
+    <string name="check_success">校验成功</string>
+    <string name="check_failed">校验失败</string>
+    <string name="base_system_version">系统版本号</string>
+    <string name="base_uboot_version">uboot版本号</string>
+    <string name="base_hardware_version">硬件版本号</string>
+    <string name="base_software_version">软件版本号</string>
+    <string name="base_serial">设备序列号</string>
+    <string name="base_module">设备型号</string>
+    <string name="base_ip_address">ip地址</string>
+    <string name="base_mac_address">mac地址</string>
+    <string name="base_section_no">分区号码</string>
+    <string name="base_section_name">分区名称</string>
+    <string name="base_set">设置</string>
+
+    <!-- 呼叫测试相关 -->
+    <string name="call_address">呼叫地址</string>
+    <string name="call_start">开始呼叫</string>
+    <string name="call_stop">停止呼叫</string>
+    <string name="call_pause">暂停呼叫</string>
+    <string name="call_resume">恢复呼叫</string>
+    <string name="call_video">视频通话</string>
+    <string name="call_audio">语音通话</string>
+    <string name="call_accept">接受呼叫</string>
+    <string name="call_reject">拒绝通话</string>
+    <string name="call_status">呼叫状态</string>
+    <string name="call_remote_name">远端名称</string>
+    <string name="call_notice_address_can_not_empty">呼叫地址不能为空</string>
+
+    <!-- 好友列表测试相关 -->
+    <string name="friend_phone_no">分机号码</string>
+    <string name="friend_address">地址</string>
+    <string name="friend_name">姓名</string>
+    <string name="friend_group">设备名称</string>
+    <string name="friend_presence">状态</string>
+    <string name="friend_add">点击此处添加好友</string>
+    <string name="friend_find">查询</string>
+    <string name="friend_group_name">分组名称</string>
+    <string name="friend_presence_id">出席id</string>
+    <string name="friend_presence_set">改变</string>
+    <string name="friend_bed_no">床号</string>
+    <string name="friend_patient_sn">sn</string>
+
+    <!-- 房间列表测试相关 -->
+    <string name="room_phone_no">房间序号</string>
+    <string name="room_no">房间号</string>
+    <string name="room_bed_list">病床列表</string>
+
+    <!-- android自动sip测试 -->
+    <string name="contactAddress">SIP Address to contact</string>
+    <string name="talk">Talk</string>
+
+    <!-- 呼叫日志相关 -->
+    <string name="call_log_id">序号</string>
+    <string name="call_log_dir">方向</string>
+    <string name="call_log_status">状态</string>
+    <string name="call_log_local">本端地址</string>
+    <string name="call_log_remote">远端地址</string>
+    <string name="call_log_error">错误信息</string>
+    <string name="call_log_time">开始时间</string>
+    <string name="call_log_duration">时长</string>
+    <string name="call_log_refresh">刷新</string>
+    <string name="call_log_record_file">录音文件</string>
+
+    <!-- 附件相关 -->
+    <string name="attachment_ring">铃声</string>
+    <string name="attachment_audio_multicast">广播音乐</string>
+    <string name="attachment_use">用途</string>
+    <string name="attachment_name">名称</string>
+
+    <!-- 是否具有root权限 -->
+    <string name="is_root">有root权限</string>
+    <string name="is_not_root">无root权限</string>
+</resources>

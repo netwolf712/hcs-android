@@ -1,0 +1,6 @@
+<resources>
+    <!-- 基本属性 -->
+    <string name="default_hcs_server_server_address">0.0.0.0</string>
+    <integer name="default_hcs_server_server_port">8080</integer>
+    <integer name="default_hcs_server_socket_timeout_time">30</integer>
+</resources>

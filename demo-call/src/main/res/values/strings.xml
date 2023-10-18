@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">demo-call</string>
+
+    <!-- 呼叫测试相关 -->
+    <string name="call_address">呼叫地址</string>
+    <string name="call_start">开始呼叫</string>
+    <string name="call_stop">停止呼叫</string>
+    <string name="call_pause">暂停呼叫</string>
+    <string name="call_resume">恢复呼叫</string>
+    <string name="call_video">视频通话</string>
+    <string name="call_audio">语音通话</string>
+    <string name="call_accept">接受呼叫</string>
+    <string name="call_reject">拒绝通话</string>
+    <string name="call_status">呼叫状态</string>
+    <string name="call_remote_name">远端名称</string>
+    <string name="call_file_path">放音文件</string>
+    <string name="call_notice_address_can_not_empty">呼叫地址不能为空</string>
+    <string name="call_choose_file">选择文件</string>
+    <string name="call_start_play">开始播放</string>
+    <string name="call_stop_play">停止播放</string>
+
+    <!-- 好友列表测试相关 -->
+    <string name="friend_phone_no">号码</string>
+    <string name="friend_address">地址</string>
+    <string name="friend_name">姓名</string>
+    <string name="friend_group">分组</string>
+    <string name="friend_presence">出席状态</string>
+    <string name="friend_add">点击此处添加好友</string>
+    <string name="friend_find">查询</string>
+    <string name="friend_group_name">分组名称</string>
+    <string name="friend_presence_id">出席id</string>
+    <string name="friend_presence_set">改变</string>
+
+    <!-- 聊天相关 -->
+    <string name="chat_remote_address">远端地址</string>
+    <string name="chat_send">发送</string>
+    <string name="chat_send_message">发送消息</string>
+    <string name="chat_from_address">发送方地址</string>
+    <string name="chat_to_address">接收方地址</string>
+    <string name="chat_send_time">发送时间</string>
+    <string name="chat_message">消息内容</string>
+    <string name="chat_notice_remote_number_can_not_empty">远端号码不能为空</string>
+    <string name="chat_notice_remote_number_not_existed">远端号码不存在</string>
+    <string name="chat_notice_message_can_not_empty">消息内容不能为空</string>
+    <string name="chat_notice_send_success">发送成功</string>
+
+    <!-- 设置相关 -->
+    <string name="setting_username">用户名</string>
+    <string name="setting_display_name">显示名</string>
+    <string name="setting_auto_answer">是否自动应答</string>
+    <string name="setting_auto_answer_time">自动应答时间</string>
+    <string name="setting_video_enable">是否启用视频</string>
+    <string name="setting_user_IPv6">是否使用IPv6</string>
+    <string name="setting_save">设置</string>
+
+    <!-- 呼叫日志相关 -->
+    <string name="call_log_id">序号</string>
+    <string name="call_log_dir">方向</string>
+    <string name="call_log_status">状态</string>
+    <string name="call_log_local">本端地址</string>
+    <string name="call_log_remote">远端地址</string>
+    <string name="call_log_error">错误信息</string>
+    <string name="call_log_time">开始时间</string>
+    <string name="call_log_duration">时长</string>
+    <string name="call_log_refresh">刷新</string>
+    <string name="call_log_record_file">录音文件</string>
+
+    <!-- 组播相关 -->
+    <string name="multicast_address">广播地址</string>
+    <string name="multicast_filepath">广播文件</string>
+    <string name="multicast_start_play">开始播放</string>
+    <string name="multicast_stop_play">停止播放</string>
+    <string name="multicast_with_video">是否带视频</string>
+    <string name="multicast_choose_file">选择文件</string>
+    <string name="multicast_start">监听广播</string>
+    <string name="multicast_stop">监听停止</string>
+    <string name="multicast_loop_play">是否循环播放</string>
+    <string name="multicast_filepath_can_not_empty">放音文件不能为空</string>
+    <string name="multicast_address_can_not_empty">监听地址不能为空</string>
+</resources>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.hcs.android.ui.util.ShowUtil" />
+        <import type="com.hcs.app.util.DisplayConvertUtil" />
+        <variable
+            name="friend"
+            type="com.hcs.android.business.entity.PlaceModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/friend_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:contentPaddingBottom="15dp"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
+        app:contentPaddingTop="15dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_phone_no_key"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center"
+                android:text="@string/friend_phone_no"
+                android:textColor="#888888"
+                android:textSize="15sp"
+
+                />
+
+            <EditText
+                android:id="@+id/txt_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_phone_no_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_phone_no_key"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:text="@{String.valueOf(friend.place.placeSn)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_address_key"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_phone_no_key"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center"
+                android:text="@string/friend_bed_no"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txt_bed_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_address_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_address_key"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:text="@{DisplayConvertUtil.getNo(friend)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_display_name_key"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_address_key"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center"
+                android:text="@string/friend_name"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txt_patient_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_display_name_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_display_name_key"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:text="@{DisplayConvertUtil.getPatientName(friend)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_group_key"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_display_name_key"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center"
+                android:text="@string/friend_group"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txt_group_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_group_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_group_key"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:text="@{DisplayConvertUtil.getDeviceId(friend)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_patient_sn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_group_key"
+                android:layout_marginTop="4dp"
+                android:gravity="left|center"
+                android:text="@string/friend_patient_sn"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/txt_patient_sn_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_patient_sn"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_group_key"
+                android:minWidth="200dp"
+                android:singleLine="true"
+                android:text="@{DisplayConvertUtil.getPatientSn(friend)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_patient_sn"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_common_dialog_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="取消"
+                    android:textColor="#007AFF"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/view_halving_line"
+                    android:layout_width="1dp"
+                    android:layout_height="44dp"
+                    android:background="#2108141F" />
+                <Button
+                    android:id="@+id/btn_common_dialog_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="删除"
+                    android:textColor="#FF0000"
+                    android:visibility="gone"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="44dp"
+                    android:background="#2108141F" />
+
+                <Button
+                    android:id="@+id/btn_common_dialog_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="确定"
+                    android:textColor="#007AFF"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

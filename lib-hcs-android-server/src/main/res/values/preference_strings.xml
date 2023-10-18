@@ -1,0 +1,6 @@
+<resources>
+    <!-- 基本属性 -->
+    <string name="pref_key_hcs_server_server_address">pref.hcs.server.server_address</string>
+    <string name="pref_key_hcs_server_server_port">pref.hcs.server.server_port</string>
+    <string name="pref_key_hcs_server_socket_timeout_time">pref.hcs.server.socket_timeout_time</string>
+</resources>

@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        ndkVersion '16.1.4479499'
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+//    signingConfigs {
+//        debug   {
+//            storeFile file('../signapk/sedg.keystore')   //sedg.keystore已设为相对路径
+//            storePassword 'password'							    //密码
+//            keyAlias 'keyAlias'										//别名
+//            keyPassword 'password'
+//        }
+//        release   {
+//            storeFile file('../signapk/sedg.keystore')   //sedg.keystore已设为相对路径
+//            storePassword 'password'							    //密码
+//            keyAlias 'keyAlias'										//别名
+//            keyPassword 'password'
+//        }
+//    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: '../java-libs')
+
+    //json解析
+    implementation rootProject.ext.dependencies.gson
+
+    //rxjava集合
+    implementation rootProject.ext.dependencies.rxjava
+    implementation rootProject.ext.dependencies.rxandroid
+    implementation rootProject.ext.dependencies.eventbus
+    implementation(rootProject.ext.dependencies.rxbinding) {
+        exclude group: 'com.android.support'
+    }
+    implementation(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.leo618:zip:0.0.1'
+
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+}
+
+apply from: "../gradle-mvn-push.gradle";
+
+//编译发布到maven
+task deploy{
+    dependsOn tasks.clean
+    dependsOn tasks.build
+    dependsOn tasks.publish
+    tasks.preBuild.mustRunAfter(tasks.clean)
+    //tasks.generatePomFileForDebugPublication.mustRunAfter(tasks.build)
+    tasks.generatePomFileForReleasePublication.mustRunAfter(tasks.build)
+}
+
+configurations {
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpcore'
+}

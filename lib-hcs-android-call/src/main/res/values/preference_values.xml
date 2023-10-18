@@ -1,0 +1,4 @@
+<resources>
+    <!-- 呼叫 -->
+    <bool name="default_enable_video">false</bool>
+</resources>

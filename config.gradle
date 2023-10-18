@@ -1,0 +1,74 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 31,
+            buildToolsVersion: "27.0.3",
+            applicationId    : "com.hcs.android",
+            minSdkVersion    : 23,
+            targetSdkVersion : 27,
+            versionCode      : 3,
+            versionName      : "3.0",
+    ]
+    //version配置
+    versions = [
+            "support-version": "27.0.3",
+            "junit-version"  : "4.12",
+            "lib-hcs":"0.1.3"
+    ]
+
+    //依赖第三方配置
+    dependencies = [
+            //rxjava
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.3",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            //rx系列与View生命周期同步
+            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            //rxbinding
+            "rxbinding"                            : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //rx 6.0权限请求
+            "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
+            //network
+            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
+            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            "logging-interceptor"                  : "com.squareup.okhttp3:logging-interceptor:3.9.1",
+
+            //glide图片加载
+            "glide"                                : "com.github.bumptech.glide:glide:4.8.0",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.8.0",
+            //json解析
+            "gson"                                 : "com.google.code.gson:gson:2.8.5",
+
+            //Google AAC
+            "lifecycle-extensions"                 : "android.arch.lifecycle:extensions:1.1.1",
+            "lifecycle-compiler"                 : "android.arch.lifecycle:compiler:1.1.1",
+            //阿里路由框架
+            "arouter-api"                          : "com.alibaba:arouter-api:1.5.2",
+            "arouter-compiler"                     : "com.alibaba:arouter-compiler:1.2.2",
+            "eventbus"                             : "org.greenrobot:eventbus:3.1.1",
+            "dagger"                             : "com.google.dagger:dagger:2.13",
+            "dagger-compiler"                      :"com.google.dagger:dagger-compiler:2.13",
+            "stetho"                               :"com.facebook.stetho:stetho:1.3.1",
+            "MultiImageSelector"                   :"com.github.lovetuzitong:MultiImageSelector:1.2",
+
+            //自定义框架
+            "hcsCommon"                          : "io.github.netwolf712:lib-hcs-android-common:0.1.3",
+            "hcsOnvif"                           : "io.github.netwolf712:lib-hcs-android-onvif:0.1.3",
+            "andServerProcessor"                 : "io.github.netwolf712:processor:2.1.6",
+            "andServerApi"                       : "io.github.netwolf712:api:2.1.6",
+            "andServerAnnotation"                : "io.github.netwolf712:annotation:2.1.6",
+            "hcsAnnotation"                      : "io.github.netwolf712:lib-hcs-android-annotation:0.1.2",
+            "hcsProcessor"                       : "io.github.netwolf712:lib-hcs-android-processor:0.1.3",
+            "hcsServer"                          : "io.github.netwolf712:lib-hcs-android-server:0.1.3",
+            "hcsUI"                              : "io.github.netwolf712:lib-hcs-android-ui:0.1.3",
+            "hcsMaintain"                        : "io.github.netwolf712:lib-hcs-android-maintain:0.1.3",
+            "hcsLinphoneSDK"                     : "io.github.netwolf712:linphone-sdk-android:0.1.2",
+            "hcsCall"                            : "io.github.netwolf712:lib-hcs-android-call:0.1.3",
+            "hcsClient"                            : "io.github.netwolf712:lib-hcs-android-client:0.1.3",
+    ]
+
+}
+
+

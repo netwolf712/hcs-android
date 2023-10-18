@@ -1,0 +1,130 @@
+<resources>
+    <!-- 基本属性 -->
+    <string name="pref_key_whole_title">pref.hcs.whole_title</string>
+    <string name="pref_key_device_type">pref.hcs.device_type</string>
+    <string name="pref_key_phone_number">pref.hcs.phone_number</string>
+    <string name="pref_key_parent_number">pref.hcs.parent_number</string>
+    <string name="pref_key_service_address">pref.hcs.service_address</string>
+    <string name="pref_key_service_port">pref.hcs.service_port</string>
+    <string name="pref_key_multicast_address">pref.hcs.multicast_address</string>
+    <string name="pref_key_multicast_port">pref.hcs.multicast_port</string>
+    <string name="pref_key_audio_multicast_address">pref.hcs.audio_multicast_address</string>
+    <string name="pref_key_play_audio_multicast_ready_code">pref.hcs.play_audio_multicast_ready_code</string>
+    <string name="pref_key_section_no">pref.hcs.section_no</string>
+    <string name="pref_key_section_name">pref.hcs.section_name</string>
+    <string name="pref_key_ring_tone_path">pref.hcs.ring_tone_path</string>
+    <string name="pref_key_ring_back_tone_path">pref.hcs.ring_back_tone_path</string>
+    <string name="pref_key_tts_mode">pref.hcs.tts_mode</string>
+    <string name="pref_key_dict_update_time">pref.hcs.dict_update_time</string>
+    <string name="pref_key_step_master_update_time">pref.hcs.step_master_update_time</string>
+    <string name="pref_key_time_slot_update_time">pref.hcs.time_slot_update_time</string>
+
+    <!-- 全局广播 -->
+    <string name="pref_key_audio_multicast_group_whole_volume">pref.hcs.audio_multicast_group_whole_volume</string>
+    <string name="pref_key_audio_multicast_group_whole_file_list">pref.hcs.audio_multicast_group_whole_file_list</string>
+    <string name="pref_key_audio_multicast_group_whole_play_type">pref.hcs.audio_multicast_group_whole_play_type</string>
+    <string name="pref_key_audio_multicast_auto_check_period">pref.hcs.audio_multicast_auto_check_period</string>
+    <!-- 姓名隐私策略 -->
+    <string name="pref_key_privacy_enable">pref.hcs.privacy_enable</string>
+    <string name="pref_key_privacy_device_type">pref.hcs.privacy_device_type</string>
+    <string name="pref_key_privacy_rule_hide_start">pref.hcs.privacy_rule_hide_start</string>
+    <string name="pref_key_privacy_rule_hide_length">pref.hcs.privacy_rule_hide_length</string>
+    <string name="pref_key_privacy_rule_replace_character">pref.hcs.privacy_rule_replace_character</string>
+    <!-- 年龄计算策略 -->
+    <string name="pref_key_age_rule_use_nominal">pref.hcs.age_rule_use_nominal</string>
+    <string name="pref_key_age_rule_show_year_month_age">pref.hcs.age_rule_show_year_month_age</string>
+    <string name="pref_key_age_rule_show_month_day_age">pref.hcs.age_rule_show_month_day_age</string>
+
+    <string name="pref_key_master_speaker_day_volume">pref.hcs.master_speaker_day_volume</string>
+    <string name="pref_key_master_ring_day_volume">pref.hcs.master_ring_day_volume</string>
+    <string name="pref_key_master_key_day_volume">pref.hcs.master_key_day_volume</string>
+    <string name="pref_key_slave_speaker_day_volume">pref.hcs.slave_speaker_day_volume</string>
+    <string name="pref_key_night_volume_set_enable">pref.hcs.night_volume_set_enable</string>
+    <string name="pref_key_master_speaker_night_volume">pref.hcs.master_speaker_night_volume</string>
+    <string name="pref_key_master_ring_night_volume">pref.hcs.master_ring_night_volume</string>
+    <string name="pref_key_master_key_night_volume">pref.hcs.master_key_night_volume</string>
+    <string name="pref_key_slave_speaker_night_volume">pref.hcs.slave_speaker_night_volume</string>
+    <!-- 主机基础号码 -->
+    <string name="pref_key_master_base_no">pref.hcs.master_base_no</string>
+    <!-- 日志 -->
+    <string name="pref_key_log_dmesg">pref.hcs.log_dmesg</string>
+    <string name="pref_key_log_logcat">pref.hcs.log_logcat</string>
+    <string name="pref_key_log_pcap">pref.hcs.log_pcap</string>
+
+    <!-- 主机级别 -->
+    <string name="pref_key_forbid_call_upload_enable">pref.hcs.forbid_call_up_enable</string>
+    <string name="pref_key_trust_time_enable">pref.hcs.trust_time_enable</string>
+
+
+    <!-- 主机专有配置 -->
+    <string name="pref_key_zone_code">pref.hcs.zone_code</string>
+    <string name="pref_key_max_section_count">pref.hcs.max_section_count</string>
+    <string name="pref_key_max_station_count">pref.hcs.max_station_count</string>
+    <string name="pref_key_max_room_count">pref.hcs.max_room_count</string>
+    <string name="pref_key_max_bed_count">pref.hcs.max_bed_count</string>
+    <string name="pref_key_max_group_count">pref.hcs.max_group_count</string>
+    <string name="pref_key_max_corridor_count">pref.hcs.max_corridor_count</string>
+    <string name="pref_key_max_wash_room_count">pref.hcs.max_wash_room_count</string>
+    <string name="pref_key_slave_offline_time">pref.hcs.slave_offline_time</string>
+    <string name="pref_key_direct_call_no">pref.hcs.direct_call_no</string>
+    <string name="pref_key_trust_phone_no">pref.hcs.trust_phone_no</string>
+    <string name="pref_key_auto_trust">pref.hcs.auto_trust</string>
+    <string name="pref_key_trust_state">pref.hcs.trust_state</string>
+    <string name="pref_key_trust_check_time">pref.hcs.trust_check_time</string>
+    <string name="pref_key_auto_trust_check_time">pref.hcs.auto_trust_check_time</string>
+    <!-- 各分机配置管理 -->
+    <string name="pref_key_theme">pref.hcs.theme</string>
+    <string name="pref_key_room_no">pref.hcs.room_no</string>
+    <string name="pref_key_room_name">pref.hcs.room_name</string>
+    <string name="pref_key_bed_no">pref.hcs.bed_no</string>
+    <string name="pref_key_group_sn">pref.hcs.group_sn</string>
+    <string name="pref_key_bed_name">pref.hcs.bed_name</string>
+    <string name="pref_key_max_call_wait_time">pref.hcs.max_call_wait_time</string>
+    <string name="pref_key_max_lost_connect_count">pref.hcs.max_lost_connect_count</string>
+    <string name="pref_key_last_data_command_index">pref.hcs.last_data_command_index</string>
+    <string name="pref_key_max_wait_data_command_count">pref.hcs.max_wait_data_command_count</string>
+    <string name="pref_key_max_wait_data_command_time">pref.hcs.max_wait_data_command_time</string>
+    <!-- 床头屏 -->
+    <string name="pref_key_current_config_id_device_type_bed_screen">pref.hcs.bed_screen_current_config_id</string>
+    <string name="pref_key_current_template_id_device_type_bed_screen">pref.hcs.bed_screen_current_template_id</string>
+    <string name="pref_key_bed_screen_screen_saver">pref.hcs.bed_screen_screen_saver</string>
+    <string name="pref_key_bed_screen_screen_saver_time">pref.hcs.bed_screen_screen_saver_time</string>
+    <string name="pref_key_bed_screen_screen_shut_time">pref.hcs.bed_screen_screen_shut_time</string>
+    <string name="pref_key_bed_screen_function_count">pref.hcs.bed_screen_function_count</string>
+    <string name="pref_key_bed_screen_function_id_prefix">pref.hcs.bed_screen_function_id_</string>
+    <string name="pref_key_bed_screen_function_name_prefix">pref.hcs.bed_screen_function_name_</string>
+    <string name="pref_key_bed_screen_hotkey_external_button_id">pref.hcs.bed_screen_hotkey_external_button_id</string>
+    <string name="pref_key_bed_screen_hotkey_external_call_name">pref.hcs.bed_screen_hotkey_external_call_name</string>
+    <string name="pref_key_bed_screen_hotkey_external_is_emergency_call">pref.hcs.bed_screen_hotkey_external_is_emergency_call</string>
+
+    <string name="pref_key_bed_screen_hotkey_in_hand_button_id">pref.hcs.bed_screen_hotkey_in_hand_button_id</string>
+    <string name="pref_key_bed_screen_hotkey_in_hand_call_name">pref.hcs.bed_screen_hotkey_in_hand_call_name</string>
+    <string name="pref_key_bed_screen_hotkey_in_hand_is_emergency_call">pref.hcs.bed_screen_hotkey_in_hand_is_emergency_call</string>
+
+    <!-- 门口屏 -->
+    <string name="pref_key_current_config_id_device_type_room_screen">pref.hcs.room_screen_current_config_id</string>
+    <string name="pref_key_current_template_id_device_type_room_screen">pref.hcs.room_screen_current_template_id</string>
+    <string name="pref_key_room_screen_screen_saver">pref.hcs.room_screen_screen_saver</string>
+    <string name="pref_key_room_screen_screen_saver_time">pref.hcs.room_screen_screen_saver_time</string>
+    <string name="pref_key_room_screen_screen_shut_time">pref.hcs.room_screen_screen_shut_time</string>
+    <string name="pref_key_room_screen_function_count">pref.hcs.room_screen_function_count</string>
+    <string name="pref_key_room_screen_function_id_prefix">pref.hcs.room_screen_function_id_</string>
+    <string name="pref_key_room_screen_function_name_prefix">pref.hcs.room_screen_function_name_</string>
+
+    <string name="pref_key_current_config_id_device_type_door_control">pref.hcs.door_control_current_config_id</string>
+    <string name="pref_key_current_template_id_device_type_door_control">pref.hcs.door_control_current_template_id</string>
+    <string name="pref_key_current_config_id_device_type_nurse_station_panel">pref.hcs.nurse_station_panel_current_config_id</string>
+    <string name="pref_key_current_template_id_device_type_nurse_station_panel">pref.hcs.nurse_station_panel_current_template_id</string>
+    <string name="pref_key_current_config_id_device_type_corridor_screen">pref.hcs.corridor_screen_current_config_id</string>
+    <string name="pref_key_current_template_id_device_type_corridor_screen">pref.hcs.corridor_screen_current_template_id</string>
+
+    <string name="pref_key_work_loop_span">pref.hcs.work_loop_span</string>
+    <string name="pref_key_heart_beat_span">pref.hcs.heart_beat_span</string>
+
+    <!-- 吸氧、用药、输液、皮试、护理的默认时间 -->
+    <string name="pref_key_oxygen_inhalation_time">pref.hcs.oxygen_inhalation_time</string>
+    <string name="pref_key_medication_time">pref.hcs.medication_time</string>
+    <string name="pref_key_infusion_time">pref.hcs.infusion_time</string>
+    <string name="pref_key_skin_test_time">pref.hcs.skin_test_time</string>
+    <string name="pref_key_nursing_time">pref.hcs.nursing_time</string>
+</resources>

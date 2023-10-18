@@ -1,0 +1,82 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hcs.android.common"
+    android:sharedUserId="android.uid.system">
+    <!-- 允许应用程序访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 允许应用程序关闭系统 -->
+    <!-- 张源: 属于Protected Permission的权限，仅仅在AndroidManifest.xml中申明是无法真正获取到权限的-->
+    <!-- 实际上直接敲 reboot -p 命令就能关闭系统, 根本不需要广播关闭 -->
+    <!--    <uses-permission android:name="android.permission.SHUTDOWN"-->
+    <!--        tools:ignore="ProtectedPermissions" />-->
+
+    <!-- 允许应用程序访问存储设备 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许访问网络主题-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许获取运营商信息-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 以下权限用于系统升级相关 -->
+    <!-- Permission to show the UI for firmware update -->
+<!--    <permission android:name="com.hcs.android.permission.SHOW_UI"-->
+<!--        android:label="@string/permlab_showUI"-->
+<!--        android:description="@string/permdesc_shwoUI"-->
+<!--        android:protectionLevel="signature" />-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.COMPONENT_ENABLED_STATE_DEFAULT"/>
+    <uses-permission android:name="android.permission.DIRECTORY_DOWNLOADS"/>
+
+<!--    <uses-permission android:name="com.hcs.android.permission.SHOW_UI" />-->
+    <uses-permission
+        android:name="android.permission.REBOOT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECOVERY"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.ACCESS_CACHE_FILESYSTEM"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.ACCESS_MTP"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS" tools:ignore="ProtectedPermissions" />
+    <!--    reboot need permission-->
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions" />
+    <uses-permission   android:name="android.permission.CLEAR_APP_USER_DATA"
+        tools:ignore="ProtectedPermissions" />
+    <application>
+        <receiver android:name=".updateservice.RKUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

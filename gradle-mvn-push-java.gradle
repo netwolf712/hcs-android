@@ -1,0 +1,84 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+def toRemote = project.hasProperty('toRemote') ? Boolean.valueOf("${toRemote}") : false
+println("publish to remote repository：${toRemote}")
+
+javadoc {
+    options.addStringOption("charset", "UTF-8")
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+def getReleaseRepositoryUrl() {
+    return hasProperty('RELEASE_REPOSITORY_URL') ? RELEASE_REPOSITORY_URL
+            : "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+}
+
+def getSnapshotRepositoryUrl() {
+    return hasProperty('SNAPSHOT_REPOSITORY_URL') ? SNAPSHOT_REPOSITORY_URL
+            : "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+}
+
+def getSonatypeUserName() {
+    return hasProperty('SONATYPE_USERNAME') ? SONATYPE_USERNAME : ""
+}
+
+def getSonatypePassword() {
+    return hasProperty('SONATYPE_PASSWORD') ? SONATYPE_PASSWORD : ""
+}
+signing {
+    required { toRemote && !project.version.toString().endsWith("-SNAPSHOT")}
+    sign publishing.publications
+}
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = PROJECT_GROUP
+            artifactId = POM_ARTIFACT_ID
+            version = PROJECT_VERSION
+            from components.java
+            pom {
+                name = artifactId
+                description = POM_DESCRIPTION
+                url = POM_URL
+                licenses {
+                    license {
+                        name = POM_LICENCE_NAME
+                        url = POM_LICENCE_URL
+                    }
+                }
+                developers {
+                    developer {
+                        id = POM_DEVELOPER_ID
+                        name = POM_DEVELOPER_NAME
+                    }
+                }
+                scm {
+                    connection = POM_GIT_URL
+                    developerConnection = POM_GIT_URL
+                    url = POM_URL
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "OSSRH"
+            if (project.version.toString().endsWith("-SNAPSHOT")) {
+                url = getSnapshotRepositoryUrl()
+            } else {
+                url = getReleaseRepositoryUrl()
+            }
+            credentials {
+                username = getSonatypeUserName()
+                password = getSonatypePassword()
+            }
+        }
+    }
+}

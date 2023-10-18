@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">lib-hcs-android-common</string>
+    <string name="device_service_name">设备管理服务</string>
+    <string name="linphone_service_name">linphone服务</string>
+
+    <!-- 报错信息 -->
+    <string name="error_resource">资源错误</string>
+    <string name="error_no_file">未找到文件</string>
+    <string name="error_io">IO错误</string>
+    <string name="error_network">网络错误</string>
+
+    <!-- TTS相关 -->
+    <string name="TTS_CALLING">呼叫</string>
+    <string name="TTS_PHONE">分机</string>
+
+    <!-- 年龄 -->
+    <string name="age_name">岁</string>
+    <string name="year_name">年</string>
+    <string name="month_name">月</string>
+    <string name="day_name">天</string>
+</resources>

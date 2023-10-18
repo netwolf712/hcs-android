@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">lib-hcs-android-call</string>
+    <string name="error_network_unreachable">网络不可达</string>
+
+    <!-- 呼叫方向 -->
+    <string name="call_incoming">呼入</string>
+    <string name="call_outgoing">呼出</string>
+
+    <!-- 呼叫状态 -->
+    <string name="call_success">接通</string>
+    <string name="call_aborted">放弃</string>
+    <string name="call_missed">未接</string>
+    <string name="call_declined">拒绝</string>
+    <string name="call_early_aborted">提前放弃</string>
+    <string name="call_accept_else_where">被其它人接听</string>
+    <string name="call_declined_else_where">被其它人拒绝</string>
+</resources>

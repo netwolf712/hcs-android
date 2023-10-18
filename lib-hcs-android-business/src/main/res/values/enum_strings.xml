@@ -1,0 +1,159 @@
+<resources>
+    <!-- 设备类型相关 -->
+    <string name="device_type_service">服务器</string>
+    <string name="device_type_nurse_station_master">护士站主机</string>
+    <string name="device_type_bed_screen">床头屏</string>
+    <string name="device_type_room_screen">病房门口屏</string>
+    <string name="device_type_door_control">病区门口机</string>
+    <string name="device_type_nurse_station_panel">护士站大屏</string>
+    <string name="device_type_corridor_screen">走廊屏</string>
+    <string name="device_type_web">用户通过web发送的请求</string>
+
+    <!-- 位置相关 -->
+    <string name="section">病区</string>
+    <string name="room">病房</string>
+    <string name="bed">病床</string>
+    <string name="corridor">走廊</string>
+    <string name="wash_room">洗手间</string>
+    <string name="station">工作站</string>
+
+    <!-- 控制命令相关 -->
+    <string name="command_start">命令枚举开始</string>
+    <string name="command_unknown">未知命令</string>
+    <string name="req_login_device">注册</string>
+    <string name="rsp_login_device">注册回复</string>
+    <string name="req_list_device">请求所有设备列表</string>
+    <string name="rsp_list_device">返回设备列表</string>
+    <string name="req_get_config">获取最新配置</string>
+    <string name="rsp_get_config">返回最新配置</string>
+    <string name="req_update_bed_template">向床头分机发送显示模板更新命令</string>
+    <string name="req_get_bed_template">获取分机模板</string>
+    <string name="req_update_room_template">向病房门口机发送显示模板更新命令</string>
+    <string name="req_get_room_template">获取病房门口屏模板</string>
+    <string name="req_update_door_template">向病区门口机发送显示模板更新命令</string>
+    <string name="req_update_panel_template">向一览表发送显示模板更新命令</string>
+    <string name="req_update_corridor_template">向走廊显示屏发送显示模板更新命令</string>
+    <string name="req_change_device_info">向所有其它设备通知设备自身信息变更</string>
+    <string name="req_update_dict">更新字典</string>
+    <string name="req_update_patient_info">主机向其它设备更新病员信息</string>
+    <string name="req_list_patient">请求所有病员列表</string>
+    <string name="rsp_list_patient">返回病员列表</string>
+    <string name="req_list_place">请求位置列表</string>
+    <string name="rsp_list_place">返回病员列表</string>
+    <string name="req_update_door_info">向病区门口机更新信息</string>
+    <string name="req_list_door_open_history">请求获取病区门口机的开门记录</string>
+    <string name="rsp_list_door_open_history">病区门口机回复开门记录</string>
+    <string name="req_open_door">请求病区门口机开门</string>
+    <string name="req_get_door_info">请求获取病区门口机配置信息</string>
+    <string name="rsp_get_door_info">病区门口机回复配置信息</string>
+    <string name="req_send_call">呼叫</string>
+    <string name="req_update_call_info">通知其它设备更新通话状态(只作显示)</string>
+    <string name="req_clear_call">病房门口机通知病房分机清理呼叫</string>
+    <string name="req_update_listen_device">主机通知其下的所有设备上级主机更改</string>
+    <string name="req_update_show_device">主机通知其下的设备其对应信息显示设备的更改</string>
+    <string name="req_update_capability">其它设备告知主机其当前能力</string>
+    <string name="req_multicast_start">主机向设备播放消息提醒要开始广播了</string>
+    <string name="req_multicast_stop">主机向设备播放消息告知广播结束</string>
+    <string name="req_trust">主机向其它主机发送托管请求</string>
+    <string name="rsp_trust">其它主机对托管请求的回复</string>
+    <string name="req_get_status">设备状态查询</string>
+    <string name="rsp_get_status">设备状态查询回复</string>
+    <string name="req_reboot_device">通知设备进行重启操作</string>
+    <string name="req_upgrade_device">通知设备进行升级操作</string>
+    <string name="req_bind_group">通知各设备重新绑定分区</string>
+    <string name="req_bind_place">通知绑定位置改变</string>
+    <string name="req_bind_place_parent">通知绑定位置重新绑定父节点</string>
+    <string name="req_ask_upload_device_file">通知设备更新文件到服务器</string>
+    <string name="req_upload_device_file">服务器向设备推送文件</string>
+    <string name="req_capture">抓包控制</string>
+    <string name="req_change_account">修改设备账号</string>
+    <string name="req_update_optimize">修改设备优化方案</string>
+    <string name="req_update_ipc">服务器向主机发送IPC更改命令</string>
+    <string name="req_upload_file_to_service">设备推送文件到服务器</string>
+    <string name="req_update_device_extend">主机更新分机的扩展配置</string>
+    <string name="req_update_place_info">更新位置信息</string>
+    <string name="req_update_group_info">更新分区信息</string>
+    <string name="req_find_master">寻找主机（当分机没连上服务器，且没连上主机时发送）</string>
+    <string name="req_heart_beat">给主机发送心跳</string>
+    <string name="req_list_bed">请求获取病床列表</string>
+    <string name="rsp_list_bed">病床列表请求回复</string>
+    <string name="req_list_room">请求获取病房列表</string>
+    <string name="rsp_list_room">病房列表请求回复</string>
+    <string name="req_list_section">请求获取病区列表</string>
+    <string name="rsp_list_section">病区列表请求回复</string>
+    <string name="req_get_device_info">请求获取设备信息</string>
+    <string name="rsp_get_device_info">获取设备信息请求回复</string>
+    <string name="req_get_bed_detail">请求获取病床详细</string>
+    <string name="rsp_get_bed_detail">获取病床详细信息请求回复</string>
+    <string name="req_get_room_detail">请求获取病房详细</string>
+    <string name="rsp_get_room_detail">获取病房详细信息请求回复</string>
+    <string name="req_get_section_detail">请求获取病区详细</string>
+    <string name="rsp_get_section_detail">获取病区详细信息请求回复</string>
+    <string name="req_list_dict">请求获取字典数据</string>
+    <string name="req_update_attachment">请求更新附件</string>
+    <string name="req_list_attachment">请求获取附件列表</string>
+    <string name="req_update_step_master">更新继任主机</string>
+    <string name="req_list_step_master">请求获取继任主机列表</string>
+    <string name="req_update_time_slot">更新时间段</string>
+    <string name="req_list_time_slot">请求获取时间段列表</string>
+    <string name="req_update_bed_function">更新床头屏功能</string>
+    <string name="req_list_bed_function">请求床头屏功能列表</string>
+    <string name="req_list_room_function">请求病房门口机功能列表</string>
+    <string name="req_update_privacy">更新隐私设置</string>
+    <string name="req_get_privacy">获取隐私设置</string>
+    <string name="req_update_volume">更新音量设置</string>
+    <string name="req_get_volume">获取音量设置</string>
+    <string name="notice_device_started">通知其它设备本机已经起来</string>
+    <string name="command_end">命令枚举结束</string>
+
+    <!-- 床头屏功能列表 -->
+    <string name="bed_screen_function_hospital_description">医院简介</string>
+    <string name="bed_screen_function_department_description">科室简介</string>
+    <string name="bed_screen_function_expense_query">费用查询</string>
+    <string name="bed_screen_function_nutritional_ordering">营养点餐</string>
+    <string name="bed_screen_function_service_evaluation">服务评价</string>
+    <string name="bed_screen_function_call_reinforce">呼叫增援</string>
+    <string name="bed_screen_function_call_nurse_station">呼叫护士站</string>
+    <string name="bed_screen_function_timing">计时</string>
+    <string name="bed_screen_function_custom_1">自定义1</string>
+    <string name="bed_screen_function_custom_2">自定义2</string>
+    <string name="bed_screen_function_custom_3">自定义3</string>
+    <string name="bed_screen_function_none">无效功能</string>
+
+    <!-- 设备状态 -->
+    <string name="device_unknown">未绑定设备</string>
+    <string name="device_state_offline">离线</string>
+    <string name="device_state_online">在线</string>
+    <string name="device_state_talking">通话中</string>
+    <string name="device_state_calling">呼叫中 </string>
+    <string name="device_state_call_end">呼叫结束</string>
+    <string name="device_state_call_timing_start">计时开始</string>
+    <string name="device_state_req_config">请求配置</string>
+    <string name="device_state_init">初始化中</string>
+
+    <!-- 呼叫类型 -->
+    <string name="call_type_normal">普通呼叫</string>
+    <string name="call_type_oxygen_inhalation">吸氧</string>
+    <string name="call_type_medication">用药</string>
+    <string name="call_type_infusion">输液</string>
+    <string name="call_type_shin_test">皮试</string>
+    <string name="call_type_nursing">护理</string>
+    <string name="call_type_blue_code">blue code呼叫</string>
+    <string name="call_type_reinforce">呼叫增援</string>
+    <string name="call_type_emergency">紧急呼叫</string>
+    <string name="call_type_video">视频通话</string>
+
+    <!-- TTS相关 -->
+    <string name="tts_speed_slow">慢速</string>
+    <string name="tts_speed_normal">正常</string>
+    <string name="tts_speed_fast">快速</string>
+    <string name="tts_mode_none">无</string>
+    <string name="tts_mode_place_name">播放位置信息（示例：xx号床呼叫）</string>
+    <string name="tts_mode_patient_name">播放病员信息（示例：张三呼叫）</string>
+    <string name="tts_mode_phone_number">播放分机信息（示例：分机xx呼叫）</string>
+
+    <!-- 房间功能 -->
+    <string name="call_clear">呼叫清理</string>
+    <string name="call_nurse">呼叫护士</string>
+    <string name="in_nursing">进入护理</string>
+</resources>

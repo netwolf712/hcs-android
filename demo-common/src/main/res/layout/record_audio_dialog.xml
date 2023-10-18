@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.hcs.android.ui.view.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="2dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/recordBtn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/start_record"/>
+        <Button
+            android:id="@+id/pauseBtn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="60dp"
+            android:text="@string/pause"/>
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:text="@string/close"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">demo-common</string>
+
+    <string name="close">关闭</string>
+    <!-- 录制相关 -->
+    <string name="record_name">文件名称</string>
+    <string name="record_prepare_video">准备视频录制</string>
+    <string name="record_video">录制视频</string>
+    <string name="record_audio">录制音频</string>
+    <string name="play_audio">播放音频</string>
+    <string name="record_stop">停止录制</string>
+    <string name="record_notice_can_not_empty">文件名不能为空</string>
+    <string name="record_notice_stop_first">请先停止之前的录制</string>
+    <string name="start_record">开始录制</string>
+    <string name="stop_record">停止录制</string>
+    <string name="start_play">开始播放</string>
+    <string name="stop_play">停止播放</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
+    <!-- 录音日志相关 -->
+    <string name="record_log_refresh">刷新</string>
+    <string name="record_duration">时长</string>
+    <string name="record_time">录制时间</string>
+    <string name="record_file_path">文件路径</string>
+
+    <!-- 广播消息相关 -->
+    <string name="multicast_listen_address">广播地址</string>
+    <string name="multicast_listen_port">广播端口</string>
+    <string name="multicast_remote_address">远端地址</string>
+    <string name="multicast_send">发送</string>
+    <string name="multicast_send_message">发送消息</string>
+    <string name="multicast_from_address">发送方地址</string>
+    <string name="multicast_send_time">发送时间</string>
+    <string name="multicast_message">消息内容</string>
+    <string name="multicast_notice_send_success">发送成功</string>
+    <string name="multicast_notice_address_can_not_empty">广播地址不能为空</string>
+    <string name="multicast_notice_port_can_not_empty">广播端口不能为空</string>
+    <string name="multicast_notice_message_can_not_empty">广播消息不能为空</string>
+
+    <!-- 以太网IP配置相关 -->
+    <string name="net_config_name">网络名称</string>
+    <string name="net_config_type">网络类型</string>
+    <string name="net_config_link_mode">链接模式</string>
+    <string name="net_config_mac_address">mac地址</string>
+    <string name="net_config_ip_address">ip地址</string>
+    <string name="net_config_mask">子网掩码</string>
+    <string name="net_config_gateway">默认网关</string>
+    <string name="net_config_setting">设置</string>
+
+    <!-- 日志相关 -->
+    <string name="log_dmesg_path">DMESG路径</string>
+    <string name="log_dmesg_enable">DMESG是否开启</string>
+    <string name="log_logcat_path">Logcat路径</string>
+    <string name="log_logcat_enable">logcat是否开启</string>
+    <string name="log_pcap_path">pcap路径</string>
+    <string name="log_pcap_enable">pcap是否开启</string>
+
+    <!-- 看门狗相关 -->
+    <string name="watchdog_software_enable">是否开启软件看门狗</string>
+    <string name="watchdog_hardware_enable">是否开启硬件看门狗</string>
+
+
+    <!-- IP摄像头相关 -->
+    <string name="ip_camera_monit">查看</string>
+    <string name="ip_camera_onvif_user">ONVIF账号</string>
+    <string name="ip_camera_onvif_user_notify">ONVIF账号不能为空</string>
+    <string name="ip_camera_onvif_password">ONVIF密码</string>
+    <string name="ip_camera_onvif_password_notify">ONVIF密码不能为空</string>
+    <string name="ip_camera_onvif_address">IP地址</string>
+    <string name="ip_camera_onvif_address_notify">IP地址不能为空</string>
+    <string name="ip_camera_onvif_start">开启摄像头</string>
+
+    <!-- tts相关 -->
+    <string name="tts_test">你能说中文吗？是的，我可以。我还会说英文:abcdefghijklmnopqrstuvwxyz.Hello,how are you!Fine,thank you!我还会数数：0123456789。你看，我很棒吧！</string>
+    <string name="tts_test_start">测试</string>
+
+    <!-- 音量设置相关 -->
+    <string name="media_volume">媒体音量</string>
+    <string name="save">保存</string>
+
+    <string name="reboot_system">重启系统</string>
+</resources>

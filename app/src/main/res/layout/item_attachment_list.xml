@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.hcs.app.util.DisplayConvertUtil"/>
+        <variable
+            name="attachment"
+            type="com.hcs.android.business.entity.Attachment" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/friend_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:contentPaddingBottom="15dp"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
+        app:contentPaddingTop="15dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_group_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_log_id"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_group_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_group_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_group_key"
+                android:singleLine="true"
+                android:text="@{String.valueOf(attachment.uid)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_group_key"
+                android:layout_marginTop="4dp"
+                android:text="@string/attachment_use"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_use_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_use"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_use"
+                android:singleLine="true"
+                android:text="@{DisplayConvertUtil.formatAttachmentUse(attachment.use)}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_use_value"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_use_value"
+                android:singleLine="true"
+                android:text="@string/attachment_name"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_name"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_name"
+                android:singleLine="true"
+                android:text="@{attachment.name}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/txt_record_file_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_use"
+                android:layout_marginTop="4dp"
+                android:text="@string/call_log_record_file"
+                android:textColor="#888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txt_record_file_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_record_file_key"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/txt_record_file_key"
+                android:singleLine="true"
+                android:text="@{attachment.path}"
+                android:textColor="#222222"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

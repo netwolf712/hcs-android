@@ -1,0 +1,127 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        ndkVersion '16.1.4479499'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+//        debug{
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+    }
+    dataBinding {
+        enabled true
+    }
+}
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: '../java-libs')
+    implementation project(':lib-hcs-android-common')
+//    api(rootProject.ext.dependencies.hcsCommon){
+//        //将内建库变为动态更新版本，便于实时同步
+//        changing = true
+//    }
+    implementation project(':lib-hcs-android-server')
+//    api(rootProject.ext.dependencies.hcsServer){
+//        changing = true
+//    }
+    implementation project(':lib-hcs-android-ui')
+//    api(rootProject.ext.dependencies.hcsUI){
+//        changing = true
+//    }
+    implementation project(':lib-hcs-android-call')
+//    api(rootProject.ext.dependencies.hcsCall){
+//        changing = true
+//    }
+    implementation project(':lib-hcs-android-client')
+//    api rootProject.ext.dependencies.hcsClient
+    implementation project(':lib-hcs-android-annotation')
+//    implementation(rootProject.ext.dependencies.hcsAnnotation)
+    implementation 'org.jetbrains:annotations:15.0'
+    annotationProcessor project(':lib-hcs-android-processor')
+//    annotationProcessor(rootProject.ext.dependencies.hcsProcessor)
+    implementation "androidx.room:room-runtime:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
+    implementation 'org.simple:androideventbus:1.0.5.1'
+
+    annotationProcessor 'com.android.databinding:compiler:3.2.0-alpha10'
+    //implementation rootProject.ext.dependencies.hcsMaintain
+    implementation project(':lib-hcs-android-maintain')
+
+    implementation (rootProject.ext.dependencies.glide){
+        exclude group: 'com.android.support'
+    }
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+
+    implementation rootProject.ext.dependencies["lifecycle-extensions"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+
+    implementation rootProject.ext.dependencies.dagger
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    implementation rootProject.ext.dependencies.MultiImageSelector
+
+
+    //rx管理View的生命周期
+    implementation(rootProject.ext.dependencies.rxlifecycle) {
+        exclude group: 'com.android.support'
+    }
+    implementation(rootProject.ext.dependencies["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+
+    implementation(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    implementation(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    implementation rootProject.ext.dependencies.eventbus
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+}
+
+apply from: "../gradle-mvn-push.gradle";
+
+//编译发布到maven
+task deploy{
+    dependsOn tasks.clean
+    dependsOn tasks.build
+    dependsOn tasks.publish
+    tasks.preBuild.mustRunAfter(tasks.clean)
+    //tasks.generatePomFileForDebugPublication.mustRunAfter(tasks.build)
+    tasks.generatePomFileForReleasePublication.mustRunAfter(tasks.build)
+}
+
+configurations {
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpcore'
+}

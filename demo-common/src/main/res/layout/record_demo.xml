@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.hcs.android.ui.util.ShowUtil" />
+        <variable
+            name="record"
+            type="com.hcs.commondemo.entity.RecordBo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/frgVideo"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/tvRecordAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:gravity="center"
+            android:text="@string/record_name" />
+
+        <EditText
+            android:id="@+id/etRecordAddress"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvRecordAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvRecordAddress"
+            android:hint="@string/record_name"
+            android:text="@={record.name}" />
+
+
+        <Button
+            android:id="@+id/btnPrepareVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRecordAddress"
+            android:text="@string/record_prepare_video" />
+
+        <Button
+            android:id="@+id/btnRecordVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/btnPrepareVideo"
+            android:text="@string/record_video" />
+
+        <Button
+            android:id="@+id/btnRecordAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecordAddress"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/btnPrepareVideo"
+            android:text="@string/record_audio" />
+
+        <Button
+            android:id="@+id/btnPlayAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRecordAudio"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/btnPrepareVideo"
+            android:text="@string/play_audio" />
+
+        <Button
+            android:id="@+id/btnRecordStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/tvRecordAddress"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/btnPrepareVideo"
+            android:text="@string/record_stop" />
+
+
+    </RelativeLayout>
+</layout>

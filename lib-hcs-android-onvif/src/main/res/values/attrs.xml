@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PtzControlView">
+        <attr name="bgViewColor" format="color" />
+        <attr name="PtzControlStrokeColor" format="color" />
+        <attr name="PtzControlStrokeWidth" format="dimension" />
+    </declare-styleable>
+</resources>

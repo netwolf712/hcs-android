@@ -1,0 +1,98 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+//        debug{
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+//        }
+    }
+    dataBinding {
+        enabled true
+    }
+    sourceSets.main {
+        jniLibs.srcDirs 'src/main/libs'
+        jni.srcDirs = [] // This prevents the auto generation of Android.mk
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib-hcs-android-common')
+    //implementation rootProject.ext.dependencies.hcsCommon
+    implementation rootProject.ext.dependencies["arouter-api"]
+
+    implementation (rootProject.ext.dependencies.glide){
+        exclude group: 'com.android.support'
+    }
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
+
+    implementation rootProject.ext.dependencies["lifecycle-extensions"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+
+    implementation rootProject.ext.dependencies.dagger
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    implementation rootProject.ext.dependencies.MultiImageSelector
+
+
+    //rx管理View的生命周期
+    implementation(rootProject.ext.dependencies.rxlifecycle) {
+        exclude group: 'com.android.support'
+    }
+    implementation(rootProject.ext.dependencies["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation rootProject.ext.dependencies.hcsOnvif
+
+    implementation(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    implementation(rootProject.ext.dependencies.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    implementation rootProject.ext.dependencies.eventbus
+}
+
+apply from: "../gradle-mvn-push.gradle";
+
+//编译发布到maven
+task deploy{
+    dependsOn tasks.clean
+    dependsOn tasks.build
+    dependsOn tasks.publish
+    tasks.preBuild.mustRunAfter(tasks.clean)
+    //tasks.generatePomFileForDebugPublication.mustRunAfter(tasks.build)
+    tasks.generatePomFileForReleasePublication.mustRunAfter(tasks.build)
+}
+
+configurations {
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpcore'
+}

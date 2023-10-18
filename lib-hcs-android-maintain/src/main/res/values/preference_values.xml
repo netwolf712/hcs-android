@@ -1,0 +1,19 @@
+<resources>
+    <!-- 日志 -->
+    <bool name="default_maintain_log_dmesg_open">true</bool>
+    <bool name="default_maintain_log_logcat_open">true</bool>
+    <bool name="default_maintain_log_pcap_open">true</bool>
+
+    <!-- 文件管理器缓存管理周期 -->
+    <integer name="default_maintain_cache_keep_time">600000</integer>
+    <integer name="default_maintain_max_cache_size">104857600</integer>
+    <string name="default_maintain_upload_file_path">upload</string>
+
+    <!-- 产品名称 -->
+    <string name="default_maintain_produce_name">HCS产品</string>
+
+    <!-- NTP服务器相关 -->
+    <bool name="default_maintain_ntp_enable">true</bool>
+    <string name="default_maintain_ntp_server">ntp1.aliyun.com</string>
+    <integer name="default_maintain_ntp_time">30000</integer>
+</resources>

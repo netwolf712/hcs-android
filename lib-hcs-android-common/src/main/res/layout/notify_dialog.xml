@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="4dp"
+	android:gravity="center_horizontal">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/notify"
+				android:textIsSelectable="true"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:gravity="center_vertical|center_horizontal"
+				android:textAppearance="?android:attr/textAppearanceMedium">
+			</TextView>
+			<TextView
+				android:id="@+id/description"
+				android:textIsSelectable="true"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:gravity="left"
+				android:textAppearance="?android:attr/textAppearanceMedium">
+			</TextView>
+		</LinearLayout>
+	</ScrollView>
+
+	<!-- Alert dialog style buttons along the bottom. -->
+	<LinearLayout style="?android:attr/buttonBarStyle"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:measureWithLargestChild="true">
+		<Button style="?android:attr/buttonBarButtonStyle" android:id="@+id/button_cancel"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/IFIA_btn_no" />
+		<Button style="?android:attr/buttonBarButtonStyle" android:id="@+id/button_ok"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/IFIA_btn_yes" />
+	</LinearLayout>
+</LinearLayout>

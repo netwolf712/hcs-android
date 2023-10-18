@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.hcs.android.ui.util.ShowUtil" />
+        <variable
+            name="callVo"
+            type="com.hcs.app.entity.CallVo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frgVideo"
+            android:layout_width="400dp"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/tvCallAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:gravity="center"
+            android:text="@string/call_address" />
+
+        <EditText
+            android:id="@+id/etCallAddress"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvCallAddress"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvCallAddress"
+            android:hint="@string/call_address"
+            android:text="@{callVo.remoteAddress}"/>
+
+        <TextView
+            android:id="@+id/tvRemoteNameKey"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvCallAddress"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:gravity="center"
+            android:text="@string/call_remote_name" />
+
+        <TextView
+            android:id="@+id/tvRemoteNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvRemoteNameKey"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvRemoteNameKey"
+            android:gravity="center|left"
+            android:hint="@string/call_remote_name"
+            android:text="@{callVo.remoteName}" />
+
+        <Button
+            android:id="@+id/btnStartCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canStartCall)}"
+            android:text="@string/call_start" />
+
+        <Button
+            android:id="@+id/btnStopCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canStopCall)}"
+            android:text="@string/call_stop" />
+
+        <Button
+            android:id="@+id/btnAcceptCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canAcceptCall)}"
+            android:text="@string/call_accept" />
+
+        <Button
+            android:id="@+id/btnRejectCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canRejectCall)}"
+            android:text="@string/call_reject" />
+
+        <Button
+            android:id="@+id/btnVideoCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canStartVideo)}"
+            android:text="@string/call_video" />
+
+        <Button
+            android:id="@+id/btnAudioCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canStopVideo)}"
+            android:text="@string/call_audio" />
+
+        <Button
+            android:id="@+id/btnPauseCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canPauseCall)}"
+            android:text="@string/call_pause" />
+
+        <Button
+            android:id="@+id/btnResumeCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRemoteNameKey"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/frgVideo"
+            android:text="@string/call_resume"
+            android:visibility="@{ShowUtil.convertBooleanToVisibility(callVo.canResumeCall)}" />
+
+        <TextView
+            android:id="@+id/tvCallStatusKey"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/frgVideo"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/call_status" />
+
+        <TextView
+            android:id="@+id/tvCallStatusValue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/tvCallStatusKey"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tvCallStatusKey"
+            android:gravity="center|left"
+            android:hint="@string/call_status"
+            android:text="@{callVo.callStatus}" />
+    </RelativeLayout>
+</layout>

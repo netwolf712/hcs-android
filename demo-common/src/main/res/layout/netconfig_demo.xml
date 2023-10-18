@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="netconfig"
+            type="com.hcs.commondemo.entity.NetConfigBo"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_name"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_name"
+                android:text="@={netconfig.name}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_type"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etType"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_type"
+                android:text="@={netconfig.netType}"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_link_mode"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etLinkMode"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_link_mode"
+                android:text="@={netconfig.linkMode}"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_mac_address"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etMac"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_mac_address"
+                android:text="@={netconfig.hardwareAddress}"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_ip_address"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etIp"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_ip_address"
+                android:text="@={netconfig.ipAddress}"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_mask"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etMask"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_mask"
+                android:text="@={netconfig.mask}"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/net_config_gateway"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/etGateway"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/net_config_gateway"
+                android:text="@={netconfig.gateway}"
+                />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/net_config_setting"/>
+    </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

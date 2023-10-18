@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/ip_camera_onvif_user"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/edtOnvifUser"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/ip_camera_onvif_user"
+                android:text=""
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/ip_camera_onvif_password"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/edtOnvifPassword"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/ip_camera_onvif_password"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/ip_camera_onvif_address"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/edtOnvifAddress"
+                android:layout_width="wrap_content"
+                android:minWidth="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/ip_camera_onvif_address"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llCtrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnRefreshCallLog"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/record_log_refresh"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#2108141F" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+
+</layout>

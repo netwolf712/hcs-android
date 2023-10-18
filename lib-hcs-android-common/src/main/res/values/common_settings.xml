@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- IP设置相关 -->
+    <string name="pref_key_ethernet_link_mode">pref.hcs.ethernet_link_mode</string>
+    <string name="pref_key_ethernet_static_ip">pref.hcs.ethernet_static_ip</string>
+    <string name="pref_key_ethernet_static_mask">pref.hcs.ethernet_static_mask</string>
+    <string name="pref_key_ethernet_static_gateway">pref.hcs.ethernet_static_gateway</string>
+    <string name="pref_key_ethernet_static_dns1">pref.hcs.ethernet_static_dns1</string>
+    <string name="pref_key_ethernet_static_dns2">pref.hcs.ethernet_static_dns2</string>
+    <string name="pref_key_ethernet_name">pref.hcs.ethernet_name</string>
+
+    <!-- 日志设置相关 -->
+    <!-- logcat -->
+    <string name="pref_key_log_dir_logcat">pref.hcs.log_dir_logcat</string>
+    <string name="pref_key_log_max_file_count_logcat">pref.hcs.log_max_file_count_logcat</string>
+    <string name="pref_key_log_max_keep_time_logcat">pref.hcs.log_max_keep_time_logcat</string>
+    <string name="pref_key_log_max_file_size_logcat">pref.hcs.log_max_file_size_logcat</string>
+    <!-- dmesg -->
+    <string name="pref_key_log_dir_dmesg">pref.hcs.log_dir_logcat</string>
+    <string name="pref_key_log_max_file_count_dmesg">pref.hcs.log_max_file_count_dmesg</string>
+    <string name="pref_key_log_max_keep_time_dmesg">pref.hcs.log_max_keep_time_dmesg</string>
+    <string name="pref_key_log_max_file_size_dmesg">pref.hcs.log_max_file_size_dmesg</string>
+    <!-- pcap -->
+    <string name="pref_key_log_dir_pcap">pref.hcs.log_dir_pcap</string>
+    <string name="pref_key_log_max_file_count_pcap">pref.hcs.log_max_file_count_pcap</string>
+    <string name="pref_key_log_max_keep_time_pcap">pref.hcs.log_max_keep_time_pcap</string>
+    <string name="pref_key_log_max_file_size_pcap">pref.hcs.log_max_file_size_pcap</string>
+
+    <!-- 看门狗相关 -->
+    <string name="pref_key_watchdog_software_enable">pref.hcs.watchdog_software_enable</string>
+    <string name="pref_key_watchdog_hardware_enable">pref.hcs.watchdog_hardware_enable</string>
+
+    <!-- 升级相关 -->
+    <string name="pref_key_upgrade_enable">pref.hcs.upgrade_enable</string>
+
+    <!-- 重启相关 -->
+    <string name="pref_key_reboot_delay_time">pref.hcs.reboot_delay_time</string>
+
+    <!-- TTS相关 -->
+    <string name="pref_key_tts_speed_rate">pref.hcs.tts_speed_rate</string>
+    <string name="pref_key_tts_pitch">pref.hcs.tts_pitch</string>
+</resources>

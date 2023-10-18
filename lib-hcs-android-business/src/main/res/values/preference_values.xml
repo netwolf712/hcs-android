@@ -1,0 +1,116 @@
+<resources>
+    <!-- 基本属性 -->
+    <string name="default_whole_title">xxx医院</string>
+    <integer name="default_service_port">80</integer>
+    <string name="default_message_multicast_address">239.1.2.3</string>
+    <integer name="default_message_multicast_port">21236</integer>
+    <string name="default_audio_multicast_address">239.1.2.4</string>
+    <bool name="default_play_audio_multicast_ready_code">true</bool>
+    <string name="default_section_no">0</string>
+    <string name="default_section_name">病区</string>
+    <integer name="default_work_loop_span">30000</integer>
+    <integer name="default_heart_beat_span">300000</integer>
+    <string name="default_ring_tone_path">leaving_dreams.mkv</string>
+    <string name="default_ring_back_tone_path">notes_of_the_optimistic.mkv</string>
+    <integer name="default_tts_mode">1</integer>
+    <integer name="default_dict_update_time">0</integer>
+    <integer name="default_step_master_update_time">0</integer>
+    <integer name="default_time_slot_update_time">0</integer>
+
+    <!-- 全局广播 -->
+    <integer name="default_audio_multicast_group_whole_volume">80</integer>
+    <string name="default_audio_multicast_group_whole_file_list"></string>
+    <integer name="default_audio_multicast_group_whole_play_type">1</integer>
+    <integer name="default_audio_multicast_auto_check_period">30000</integer>
+
+    <!-- 姓名隐私策略 -->
+    <bool name="default_privacy_enable">false</bool>
+    <string name="default_privacy_device_type">2,3,5,6</string>
+    <integer name="default_privacy_hide_start">2</integer>
+    <integer name="default_privacy_hide_length">1</integer>
+    <string name="default_privacy_rule_replace_character">*</string>
+    <!-- 年龄计算策略 -->
+    <bool name="default_age_rule_use_nominal">false</bool>
+    <integer name="default_age_rule_show_year_month_age">14</integer>
+    <integer name="default_age_rule_show_month_day_age">12</integer>
+
+    <integer name="default_master_speaker_day_volume">80</integer>
+    <integer name="default_master_ring_day_volume">80</integer>
+    <integer name="default_master_key_day_volume">80</integer>
+    <integer name="default_slave_speaker_day_volume">80</integer>
+    <bool name="default_night_volume_set_enable">false</bool>
+    <integer name="default_master_speaker_night_volume">80</integer>
+    <integer name="default_master_ring_night_volume">80</integer>
+    <integer name="default_master_key_night_volume">80</integer>
+    <integer name="default_slave_speaker_night_volume">80</integer>
+    <integer name="default_master_base_no">100</integer>
+    <!-- 日志 -->
+    <bool name="default_log_dmesg_open">true</bool>
+    <bool name="default_log_logcat_open">true</bool>
+    <bool name="default_log_pcap_open">true</bool>
+
+
+    <!-- 主机专有配置 -->
+    <integer name="default_zone_code">0</integer>
+    <integer name="default_max_section_count">1</integer>
+    <integer name="default_max_station_count">30</integer>
+    <integer name="default_max_room_count">30</integer>
+    <integer name="default_max_bed_count">30</integer>
+    <integer name="default_max_group_count">30</integer>
+    <integer name="default_max_corridor_count">10</integer>
+    <integer name="default_max_wash_room_count">30</integer>
+    <integer name="default_slave_offline_time">900000</integer>
+    <integer name="default_last_data_command_index">-1</integer>
+    <integer name="default_max_wait_data_command_count">10</integer>
+    <integer name="default_max_wait_data_command_time">60000</integer>
+    <string name="default_direct_call_no"></string>
+    <string name="default_trust_phone_no"></string>
+    <integer name="default_trust_state">0</integer>
+    <integer name="default_trust_check_time">300000</integer>
+    <integer name="default_auto_trust_check_time">30000</integer>
+    <bool name="default_auto_trust">false</bool>
+    <!-- 各分机配置管理 -->
+    <integer name="default_theme">0</integer>
+    <integer name="default_room_no">0</integer>
+    <string name="default_room_name">病房</string>
+    <integer name="default_bed_no">0</integer>
+    <string name="default_bed_name">病床</string>
+    <integer name="default_group_sn">-1</integer>
+    <integer name="default_max_call_wait_time">30</integer>
+    <integer name="default_max_lost_connect_count">3</integer>
+    <!-- 床头屏 -->
+    <string name="default_current_config_id_device_type_bed_screen">0</string>
+    <string name="default_current_template_id_device_type_bed_screen">0</string>
+    <string name="default_bed_screen_screen_saver">祝您早日康复</string>
+    <integer name="default_bed_screen_screen_saver_time">30</integer>
+    <string name="default_bed_screen_screen_shut_time">auto</string>
+    <integer name="default_bed_screen_function_count">7</integer>
+    <string name="default_bed_screen_hotkey_external_button_id">0</string>
+    <string name="default_bed_screen_hotkey_external_call_name">洗手间报警</string>
+    <bool name="default_bed_screen_hotkey_external_is_emergency_call">true</bool>
+    <string name="default_bed_screen_hotkey_in_hand_button_id">0</string>
+    <string name="default_bed_screen_hotkey_in_hand_call_name">换药提醒</string>
+    <bool name="default_bed_screen_hotkey_in_hand_is_emergency_call">false</bool>
+
+    <!-- 门口屏 -->
+    <string name="default_current_config_id_device_type_room_screen">0</string>
+    <string name="default_current_template_id_device_type_room_screen">0</string>
+    <string name="default_room_screen_screen_saver">祝您早日康复</string>
+    <integer name="default_room_screen_screen_saver_time">30</integer>
+    <string name="default_room_screen_screen_shut_time">auto</string>
+    <integer name="default_room_screen_function_count">3</integer>
+
+    <string name="default_current_config_id_device_type_door_control">0</string>
+    <string name="default_current_template_id_device_type_door_control">0</string>
+    <string name="default_current_config_id_device_type_nurse_station_panel">0</string>
+    <string name="default_current_template_id_device_type_nurse_station_panel">0</string>
+    <string name="default_current_config_id_device_type_corridor_screen">0</string>
+    <string name="default_current_template_id_device_type_corridor_screen">0</string>
+
+    <!-- 吸氧、用药、输液、皮试、护理的默认时间 -->
+    <integer name="default_oxygen_inhalation_time">900</integer>
+    <integer name="default_medication_time">900</integer>
+    <integer name="default_infusion_time">900</integer>
+    <integer name="default_skin_test_time">900</integer>
+    <integer name="default_nursing_time">900</integer>
+</resources>

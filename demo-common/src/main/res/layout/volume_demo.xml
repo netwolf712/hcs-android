@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+        <LinearLayout
+            android:id="@+id/llCtrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/media_volume"
+                android:gravity="center|left"
+                />
+            <EditText
+                android:id="@+id/mediaVolume"
+                android:layout_width="wrap_content"
+                android:minWidth="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:hint="@string/media_volume"
+                />
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/save"/>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

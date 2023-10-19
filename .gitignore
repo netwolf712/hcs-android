@@ -25,5 +25,4 @@ app/release
 app/debug
 app/src/main/res/xml/contacts.xml
 node_modules
-web
 /gradle.properties

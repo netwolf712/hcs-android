@@ -32,12 +32,12 @@ public class Config {
     /**
      * 外部访问web的默认用户名
      */
-    public static final String DEFAULT_OUTER_WEB_USERNAME = "Admin";
+    public static final String DEFAULT_OUTER_WEB_USERNAME = "admin";
 
     /**
      * 外部访问web的默认密码
      */
-    public static final String DEFAULT_OUTER_WEB_PASSWORD = "Admin";
+    public static final String DEFAULT_OUTER_WEB_PASSWORD = "admin";
 
     /**
      * 服务器访问web的默认用户名

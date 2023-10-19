@@ -165,4 +165,35 @@ configurations.all {
   选中lib-hcs-android-common项目，在菜单Build->Make selected Modules或Make Module 'lib-hcs-android-common'，保证模块编译通过
 * 提交类库到github仓库 
   点击编辑器右侧Gradle，在弹出的列表中选择hcs-android->lib-hcs-android-common-Run Configurations->upload，双机即可提交
-  
+
+## web管理页面
+
+- lib-hcs-android-server提供了基础的web服务
+- lib-hcs-android-maintain扩展了web功能，除了提供可供第三方直接调用的类库之外，也提供了restful形式的接口调用模式，提供了额外的前端分离页面 https://github.com/netwolf712/hcs-web-maintain
+- lib-hcs-android-business扩展了web功能，除了提供可供第三方直接调用的类库之外，也提供了restful形式的接口调用模式，前端分离页面 https://github.com/netwolf712/hcs-web-nurse-master
+- 将前端分离页面通过npm install build:prod编译成发布包后，再把发布包放入app的src/main/assets目录，即可实现管理页面与app的一体化部署
+  （访问app所在设备的ip的80端口，就是管理页面。）
+- 其中账号/密码: Admin/Admin
+- 示例图片
+<table>
+    <tr>
+        <td><img src="./doc/img/1.jpg"/></td>
+        <td><img src="./doc/img/2.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img src="./doc/img/3.jpg"/></td>
+        <td><img src="./doc/img/4.jpg"/></td>
+    </tr>    
+    <tr>
+        <td><img src="./doc/img/5.jpg"/></td>
+        <td><img src="./doc/img/6.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img src="./doc/img/7.jpg"/></td>
+        <td><img src="./doc/img/8.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img src="./doc/img/9.jpg"/></td>
+        <td><img src="./doc/img/10.jpg"/></td>
+    </tr>
+</table>

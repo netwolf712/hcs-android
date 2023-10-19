@@ -169,10 +169,15 @@ configurations.all {
 ## web管理页面
 
 - lib-hcs-android-server提供了基础的web服务
+  其中规定了默认监听的本地端口为8080，可由配置字段pref.hcs.server.server_port进行配置
+  默认监听的本地地址为0.0.0.0，可由配置字段pref.hcs.server.server_address进行配置
+  默认socket超时时间为30秒，可由配置字段pref.hcs.server.socket_timeout_time进行配置
+  以上都由WebServer在初始化时配置
+  默认的静态页面路径为app/assets/web，由AppConfig类配置
 - lib-hcs-android-maintain扩展了web功能，除了提供可供第三方直接调用的类库之外，也提供了restful形式的接口调用模式，提供了额外的前端分离页面 https://github.com/netwolf712/hcs-web-maintain
 - lib-hcs-android-business扩展了web功能，除了提供可供第三方直接调用的类库之外，也提供了restful形式的接口调用模式，前端分离页面 https://github.com/netwolf712/hcs-web-nurse-master
 - 将前端分离页面通过npm install build:prod编译成发布包后，再把发布包放入app的src/main/assets目录，即可实现管理页面与app的一体化部署
-  （访问app所在设备的ip的80端口，就是管理页面。）
+  （访问app所在设备的ip的8080端口，就是管理页面。）
 - 其中账号/密码: Admin/Admin
 - 示例图片
 <table>

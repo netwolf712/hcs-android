@@ -18,12 +18,12 @@ public interface UserDao {
     @Query("SELECT * FROM user WHERE uid IN (:userIds)")
     List<User> loadAllByIds(int[] userIds);
 
-    @Query("SELECT * FROM user WHERE username LIKE :username AND " +
-            "password LIKE :password LIMIT 1")
+    @Query("SELECT * FROM user WHERE username = :username AND " +
+            "password = :password LIMIT 1")
     User findOne(String username, String password);
 
     @Query("SELECT * FROM user WHERE " +
-            "token LIKE :token LIMIT 1")
+            "token = :token LIMIT 1")
     User getUserByToken(String token);
 
     @Insert
